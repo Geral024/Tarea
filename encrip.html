@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador y Desencriptador de texto</title>
+    <link rel="stylesheet" href="style.css">  
+</head>
+<body>
+    <div class="container">
+        <img id="imalo" src="img/logo.png" class="imalo">
+        <div class="encriptar">   
+            <textarea name="texto" class="texto" id="texto" cols="30" rows="10" placeholder="Inserte el texto aqui"></textarea>
+            <div class="terminos"> 
+                <p>Solo letras minúsculas y sin acentos.</p>
+            </div>
+            <div class="botones">
+                <input type="button" class="btn-encriptar" value="Encriptar" onclick="encriptar()">
+                <input type="button" class="btn-desencriptar" value="Desencriptar" onclick="desencriptar()">
+            </div>
+            <div class="encriptado">
+                <img id="lupa" src="img/lupa.jpg" class="lupa"> 
+                <div class="mensaje-encriptado" id="mensaje-encriptado">
+                    <h2 id="titulo-mensaje">Ningún mensaje fue encontrado</h2> 
+                    <p id="parrafo">Ingresa el texto que deseas encriptar o desencriptar</p>
+                    <div> <input type="button" class="btn-copiar" value="Copiar" onclick="copiar()"></div>
+                </div>
+            </div>  
+        </div>
+    </div>
+    <script src="encrip.js">
+        var btn = document.querySelector("#btn-encriptar");
+        btn.onclick = encriptar;
+        var btn2 = document.querySelector("#btn-desencriptar");
+        btn.onclick = desencriptar;
+        var btn3 = document.querySelector("#btn-copiar");
+        btn.onclick = copiar;
+    </script>
+</body>
+</html>
+
+
+
+
+
+    
